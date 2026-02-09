@@ -1,0 +1,26 @@
+# StreamUI - Android Music Player
+
+Este proyecto es una aplicación de reproducción de música desarrollada como parte del Laboratorio 03. para la aplicacion utilice como base la app dada en el material de apoyo de module2.
+
+## Funcionalidades Principales
+
+* Navegación por Categorías: Explora diferentes géneros musicales organizados en listas horizontales.
+* Gestión de Favoritos: Sistema sincronizado donde puedes marcar canciones con un icono de corazon. Los cambios se reflejan instantáneamente en todas las pantallas (Home y Highlights).
+* Pantalla de Highlights: Una vista de cuadricula (Grid) que filtra y muestra exclusivamente las canciones que el usuario ha marcado como favoritas.
+* Reproductor Detallado: Pantalla dedicada para visualizar la información de la canción actual con navegación de retorno.
+* Navegación Segura: Implementación de Type-Safe Navigation para el paso de parámetros entre pantallas mediante objetos de destino.
+
+## Stack Tecnologico
+
+* Kotlin: Lenguaje principal de desarrollo.
+* Jetpack Compose: Framework moderno para la creación de interfaces declarativas.
+* MVVM (Model-View-ViewModel): Patron de arquitectura para separar la logica de negocio de la interfaz.
+* StateFlow y Coroutines: Manejo de estados asincronos y flujos de datos en tiempo real.
+* Koin: Inyeccion de dependencias para desacoplar componentes y facilitar el mantenimiento.
+
+## Estructura del Codigo (UI)
+
+* HomeScreen.kt: Pantalla principal con listas de categorias. Contiene el componente reutilizable SongCard.
+* HighlightsScreen.kt: Pantalla de favoritos que utiliza un LazyVerticalGrid para mostrar las canciones destacadas.
+* PlayerScreen.kt: Interfaz del reproductor musical que muestra detalles de la cancion seleccionada.
+* HomeViewModel.kt: Clase encargada de gestionar la logica de favoritos y el estado global (UI State) de la aplicacion.
